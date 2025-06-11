@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <HelloWorld />
+  <HelloWorld msg="You’ve successfully created a project with"/>
 </template>
 
 <style scoped>
