@@ -1,10 +1,9 @@
 <template>
-  <h1>naef</h1>
+  <h1>TODO</h1>
 </template>
 
 <script setup lang="ts">
-  import { reactive, ref } from 'vue';
-  import type { TodoItem } from '@/types/EventItem';
+  import { reactive } from 'vue';
   import type { State } from '@/types/EventItem';
 
   // Data
@@ -17,7 +16,4 @@
     taskItems: [],
     listFilter: 'all'
   })
-
-  const taskItems = ref<TodoItem[]>([])
-  const listFilter = ref('all')
 </script>

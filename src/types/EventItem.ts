@@ -8,7 +8,7 @@ export interface EventItem {
   time: string
 }
 
-type TaskType = 'personal' | 'work' | 'miscellaneous'
+export type TaskType = 'personal' | 'work' | 'miscellaneous'
 
 export interface TodoItem {
   label: string
@@ -16,8 +16,10 @@ export interface TodoItem {
   isCompleted: boolean
 }
 
+export type ListFilter = 'all' | 'complete' | 'incomplete'
+
 export interface State {
   newTask: TodoItem
   taskItems: TodoItem[]
-  listFilter: 'all' | 'complete' | 'incomplete'
+  listFilter: ListFilter
 }
