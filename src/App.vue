@@ -4,7 +4,8 @@
       <div class="wrapper">
         <nav>
           <RouterLink :to="{ name: 'event-list-page' }">Events</RouterLink> |
-          <RouterLink :to="{ name: 'about-page' }">About</RouterLink>
+          <RouterLink :to="{ name: 'about-page' }">About</RouterLink> |
+          <RouterLink :to="{ name: 'todo-page' }">Todo</RouterLink>
         </nav>
       </div>
     </header>

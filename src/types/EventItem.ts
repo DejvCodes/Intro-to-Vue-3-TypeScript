@@ -7,3 +7,17 @@ export interface EventItem {
   date: string
   time: string
 }
+
+type TaskType = 'personal' | 'work' | 'miscellaneous'
+
+export interface TodoItem {
+  label: string
+  type: TaskType
+  isCompleted: boolean
+}
+
+export interface State {
+  newTask: TodoItem
+  taskItems: TodoItem[]
+  listFilter: 'all' | 'complete' | 'incomplete'
+}
