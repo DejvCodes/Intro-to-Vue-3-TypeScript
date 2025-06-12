@@ -9,7 +9,7 @@
 <script setup lang="ts">
   import { ref, onMounted, defineProps } from 'vue';
   import EventService from '../services/EventService';
-  import type { EventItem } from '@/types/EventItem';
+  import type { EventItem } from '@/types/Types';
 
   const props = defineProps<{
     id: number  

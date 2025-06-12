@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
   import { ref, onMounted } from 'vue';
-  import type { EventItem } from '@/types/EventItem';
+  import type { EventItem } from '@/types/Types';
   import EventCard from '../components/EventCard.vue';
   import EventService from '../services/EventService';
 

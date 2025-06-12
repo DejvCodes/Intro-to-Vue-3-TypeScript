@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
   import { reactive } from 'vue';
-  import type { State } from '@/types/EventItem';
+  import type { State } from '@/types/Types';
 
   // Data
   const state: State = reactive({
