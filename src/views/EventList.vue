@@ -1,15 +1,19 @@
 <template>
   <h1>Events For Good</h1>
   <div class="events">
-    <EventCard v-for="event in events" :key="event.id" :event="event" /> <!-- :event je props-->
+    <EventCard 
+      v-for="event in events" 
+      :key="event.id" 
+      :event="event" 
+    /> <!-- :event je props-->
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue'
-  import type { EventItem } from '@/types/EventItem'
-  import EventCard from '../components/EventCard.vue'
-  import EventService from '../services/EventService'
+  import { ref, onMounted } from 'vue';
+  import type { EventItem } from '@/types/EventItem';
+  import EventCard from '../components/EventCard.vue';
+  import EventService from '../services/EventService';
 
   const events = ref<EventItem[]>([])
 

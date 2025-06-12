@@ -1,5 +1,9 @@
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-details-page', params: { id: event.id } }">
+  <RouterLink 
+    v-if="event" 
+    class="event-link" :to="{ name: 'event-details-page', params: { id: event.id } }"
+    :aria-label="`Zobrazit detaily události: ${event.title}`"
+  >
     <div class="event-card">
       <h2>{{ event.title }}</h2>
       <span>@{{ event.time }} on {{ event.date }}</span>
@@ -8,16 +12,16 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
-import { RouterLink } from 'vue-router';
-import type { EventItem } from '@/types/EventItem';
+  import { defineProps } from 'vue';
+  import { RouterLink } from 'vue-router';
+  import type { EventItem } from '@/types/EventItem';
 
-defineProps<{
-  event: EventItem
-}>()
+  defineProps<{
+    event: EventItem
+  }>()
 </script>
 
-<style scoped>
+<style scoped>  
   .event-card {
     padding: 20px;
     width: 250px;

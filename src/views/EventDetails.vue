@@ -1,26 +1,3 @@
-<script setup>
-  import { ref, onMounted } from 'vue'
-  import EventService from '../services/EventService'
-
-  // const props = defineProps({
-  //   id: {
-  //     required: true,
-  //   },
-  // })
-
-  // const event = ref(null)
-
-  // onMounted(() => {
-  //   EventService.getEvent(props.id)
-  //     .then((response) => {
-  //       event.value = response.data
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  // })
-</script>
-
 <template>
   <div v-if="event">
     <h1>{{ event.title }}</h1>
@@ -28,3 +5,25 @@
     <p>{{ event.description }}</p>
   </div>
 </template>
+
+<script setup lang="ts">
+  import { ref, onMounted, defineProps } from 'vue';
+  import EventService from '../services/EventService';
+  import type { EventItem } from '@/types/EventItem';
+
+  const props = defineProps<{
+    id: number  
+  }>()
+
+  const event = ref<EventItem | null>(null)
+
+  onMounted(() => {
+    EventService.getEvent(props.id)
+      .then((response) => {
+        event.value = response.data
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
+</script>
