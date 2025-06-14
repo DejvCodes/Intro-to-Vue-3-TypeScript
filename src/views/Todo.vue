@@ -63,9 +63,9 @@
       ...newTask.value,
       isCompleted: false
     })
-    // console.log(newTask.value)
 
     newTask.value.label = ''
+    newTask.value.type = 'personal'
   }
 </script>
 
