@@ -11,7 +11,7 @@
 • Bonus: Composition API with TypeScript
 
 ## 💻 Tech Stack
-[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,typescript,vue)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,javascript,typescript,vue)](https://skillicons.dev) 
 
 ## 🔐 License
 [MIT License](LICENSE)
