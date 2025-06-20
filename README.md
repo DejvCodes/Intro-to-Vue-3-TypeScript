@@ -1,5 +1,5 @@
 ## Intro to Vue 3 + TypeScript - Vue Mastery
-• Why Vue & TypeScript
+Why Vue & TypeScript
 • Setting Up Vue 3 & TypeScript
 • Creating Components with TypeScript
 • Type Fundamentals
